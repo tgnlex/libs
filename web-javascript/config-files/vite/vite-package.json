@@ -1,0 +1,14 @@
+{
+    "name": "learning-grunt",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+      "build": "vite build --outDir dist/ --ssrManifest",
+      "build:client": "vite build --outDir dist/client --ssrManifest",
+      "build:server": "vite build --outDir dist/server --ssrManifest",
+      },
+    "author": "",
+    "license": "ISC",
+    "description": ""
+    }
+    

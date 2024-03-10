@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />    
+    <link rel="stylesheet" type="text/css" href="../style/counter.css" />
+    <link rel="stylesheet" type="text/css" href="../style/global.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+  </head>
+  <body> 
+    <header x-data="{title: 'Alpine Counter'}">
+      <h1 x-text="title"></h1>
+    </header>
+    <main id="counter" x-data="{ count: 0 }">
+        <h1 x-text="title"></h1>
+        <div id="btn-container" class="wrapper sub-container">
+          <button id="add-btn" class="btn add-btn" x-on:click="count++">
+            Add One
+          </button>
+          <button id="add-ten-btn" class="btn add-btn" x-on:click="count = count + 10">
+          Add Ten
+          </button> 
+          <button id="add-hun-btn" class="btn add-btn" x-on:click="count = count + 100">
+          Add Hundred
+          </button>
+          <button id="add-thous-btn" class="btn add-btn" x-on:click="count = count + 1000">
+            Add Thousand
+          </button>
+        </div>
+        <div id="result-wrapper" class="wrapper">
+          <div id="results" class="output" x-text="count"></div>   
+          <button id="reset-btn" class="btn reset-btn" x-on:click="count = 0">
+            Reset
+          </button>
+        </div>
+        <br><br>
+        <button id="home-btn" class="btn back-btn">
+          <a class="link" href="../home.html">Go Back</a>
+        </button>
+    </main>  
+  </body>
+</html>

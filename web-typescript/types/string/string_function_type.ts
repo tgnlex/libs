@@ -1,0 +1,1 @@
+type stringFunction = (a: string) => void;
