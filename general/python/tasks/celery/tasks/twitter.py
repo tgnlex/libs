@@ -1,6 +1,5 @@
 import celery 
-from general.python.celery.tasks.twitter import Twitter
-from twitter import FailWhaleError, twitter, refresh_timeline
+from twitter import Twitter, FailWhaleError,  refresh_timeline
 app = celery()
 @app.task(bind=True)
 def send_tweet(self, oauth, tweet):
