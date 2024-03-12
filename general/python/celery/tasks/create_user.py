@@ -1,6 +1,7 @@
 import celery
-from .models import User
 
+class User:
+  email: string
 
 
 @app.task

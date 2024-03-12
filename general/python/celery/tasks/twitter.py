@@ -1,7 +1,7 @@
 import celery 
-from twitter import Twitter
-from twitter.exceptions import FailWhaleError
-
+from general.python.celery.tasks.twitter import Twitter
+from twitter import FailWhaleError, twitter, refresh_timeline
+app = celery()
 @app.task(bind=True)
 def send_tweet(self, oauth, tweet):
 	try:
@@ -13,6 +13,6 @@ def send_tweet(self, oauth, tweet):
 @app.task(autoretry_for=(FailWhaleError,))
 def refresh(user):
 	try:
-	   twitter.refresh_timeline(user)
-	except FailWhaleError as exc:
+		twitter.refresh_timeline(user)
+	except Twitter.FailWhaleError as exc:
 		raise refresh_timeline.retry(exc=exc, max_retries=5)
