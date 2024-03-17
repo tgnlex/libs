@@ -1,4 +1,4 @@
-app.use(function(req, res, next) {
+const errorHandler = (req, res, next) => {
     req.status(404)
 
     res.format({
@@ -12,7 +12,7 @@ app.use(function(req, res, next) {
         res.type('txt').send('Not found')
     }
   })
-});
+};
 
 
 
