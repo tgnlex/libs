@@ -1,9 +1,10 @@
 namespace Validation {
+    export type Validator = { [s: string]: Validation.StringValidator};
+    const lettersRegexp = /^[A-Za-z]+$/;
+    const numberRegexp = /^[0-9]+$/;
     export interface StringValidator { 
         isAcceptable(s: string): boolean;
     }
-    const lettersRegexp = /^[A-Za-z]+$/;
-    const numberRegexp = /^[0-9]+$/;
 
     export class LettersOnlyValidator implements StringValidator {
         isAcceptable(s: string) {
@@ -16,9 +17,7 @@ namespace Validation {
         }
     }   
 
-    export type Validator = { [s: string]: Validation.StringValidator};
 
-    // The following are added just for the hell of it. 
 
     export class ParseIntBasedZipCodeValidator {
         isAcceptable(s: string) {
@@ -31,6 +30,10 @@ namespace Validation {
         }
     }
 }
+
+
+
+// Examples
 
 let strings = ["Hello", "12134", "101"]
 let validator: Validation.Validator = {}

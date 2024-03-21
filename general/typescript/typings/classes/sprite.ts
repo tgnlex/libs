@@ -1,7 +1,7 @@
 class Sprite {
-    name = "";
-     x = 0;
-     y = 0;
+    name:  string;
+     x: number;
+     y: number;
 
      constructor(name: string) {
         this.name = name;
