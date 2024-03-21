@@ -12,7 +12,7 @@ const MAX: u16 = 65535;
 // Ip address fallback
 const IPFALLBACK: IpAddr = IpAddr::V4(Ipv4Addr::new(127, 0, 0, 1))
 
-#[derive(Debug, Clone, Bpafaf)]
+#[derive(Debug, Clone, Bpaf)]
 #[bpaf(options)]
 pub struct Arguments {
     #[bpaf(long, short, argument("Address"), fallback(IPFALLBACK))]
