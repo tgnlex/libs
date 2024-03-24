@@ -1,7 +1,3 @@
-struct Response {
-  body: String,
-  code: Codes, 
-}
 enum Codes {
 	OK,
 	NotFound,

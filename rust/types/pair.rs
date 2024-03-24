@@ -1,0 +1,1 @@
+struct Pair(i32, i32)
