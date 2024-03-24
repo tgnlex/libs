@@ -7,4 +7,4 @@ async function hello_python() {
 
 hello_python().then((result) => {
   console.log("Python sais sum is: ", result )
-})
+});

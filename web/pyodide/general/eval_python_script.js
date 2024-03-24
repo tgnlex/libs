@@ -1,11 +1,11 @@
 const output = document.getElementByID = output;
-const code = `
+const script = `
 def greet():
 hello = "hello " + "world!"
 print(hello)
 `;
 function addToOutput(c) {
-  output.value += ">>>" + code.value + "\n" + s + "\n"
+  output.value += ">>>" + script.value + "\n" + s + "\n"
 }
 async function main() {
   let pyodide = await loadPyodide();
@@ -17,7 +17,7 @@ let pyodideReadyPromise = main();
 async function evaluatePython() {
   let pyodide = await pyodideReadyPromise;
   try {
-    let output = pydodide.runPython(code.value);
+    let output = pyodide.runPython(script.value);
     addToOutput(output);  
   } catch (err) {
     
