@@ -1,0 +1,1 @@
+Struct Result<T, io:Error>
