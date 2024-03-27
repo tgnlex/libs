@@ -1,4 +1,4 @@
-use std::io;
+wuse std::io;
 
 
 fn get_name() {

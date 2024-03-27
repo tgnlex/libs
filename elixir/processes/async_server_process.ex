@@ -40,5 +40,5 @@ defmodule ServerProcess do
               request, 
               current_state, 
             )
-          loop(callback_modile, new_state)
+          loop(callback_module, new_state)
 end

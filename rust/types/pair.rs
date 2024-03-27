@@ -1,1 +1,1 @@
-struct Pair(i32, i32)
+struct Pair(Box<i32>, Box<i32>);

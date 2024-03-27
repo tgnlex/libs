@@ -1,3 +1,4 @@
+customElements.define('counter'
 class Counter extends HTMLElement {
 	#xValue =  0;
 	constructor() {
@@ -17,3 +18,4 @@ class Counter extends HTMLElement {
 	  this.textContent = this.#x.toString();
 	}
 }
+);
