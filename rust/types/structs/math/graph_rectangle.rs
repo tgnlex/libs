@@ -3,7 +3,7 @@ struct Point {
 	y: f64,
 }
 
-struct Graph_Rectangle {
+struct GraphRectangle {
   p1: Point;
   p2: Point;
 }

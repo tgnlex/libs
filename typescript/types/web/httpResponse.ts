@@ -5,19 +5,13 @@ export type HTTPMethod = string
   | "POST" 
   | "PUT" 
   | "PATCH" 
+  | "HEAD"  
+  | "TRACE"
   | "DELETE";
 
 
 
-export class HTTPRequest {
-  url: URL;
-  method: HTTPMethod;
-  headers?: HTTPHeaders; 
-  cookies?: Cookies;  
-  data?: any;
-}
-
-export class HTTPResponse {
+export interface HTTPResponse {
   url: URL;
   headers?: HTTPHeaders;
   cookies?: Cookies;   

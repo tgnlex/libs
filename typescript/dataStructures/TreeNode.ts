@@ -1,6 +1,6 @@
 export type NodeType = "ROOT" | "LEAF" | "INTERNAL"
 
-export class Node {
+export class TreeNode {
     name: string;
 	degree: number;
 	depth: number;
