@@ -5,3 +5,5 @@ interface TodoItem {
   completed: boolean;
   createdAt: number;
 }
+type TodoInfo = Pick<TodoItem, "id" | "name" | "description">;
+

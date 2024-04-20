@@ -1,4 +1,4 @@
-export type Browser = "IE"
+type Browser = "IE"
   | "Chrome" 
   | "Firefox"  
   | "Edge" 

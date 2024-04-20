@@ -1,4 +1,4 @@
-customElements.define('counter'
+customElements.define('counter',
 class Counter extends HTMLElement {
 	#xValue =  0;
 	constructor() {

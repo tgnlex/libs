@@ -1,4 +1,4 @@
-export class Cookie {
+export interface Cookie {
   name: string;
   value: string; 
   attributes?: string[];

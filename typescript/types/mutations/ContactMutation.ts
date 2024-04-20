@@ -1,4 +1,4 @@
-export type ContactMutation = {
+export interface ContactMutation {
   id?: string;
   first?: string;
   last?: string;

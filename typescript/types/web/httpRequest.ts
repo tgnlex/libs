@@ -5,7 +5,9 @@ export type HTTPMethod = string
   | "POST" 
   | "PUT" 
   | "PATCH" 
-  | "DELETE";
+  | "DELETE"
+  | "TRACE"
+  | "HEAD";
 
 
 

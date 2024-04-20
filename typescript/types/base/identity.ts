@@ -1,3 +1,3 @@
-interface Identity<Type> {
-	arg: Type;
-}
+interface Identity<Type>	{
+	arg: Type
+};

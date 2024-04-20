@@ -12,25 +12,23 @@ export type URLSCHEME = string
 
 export type TopDomain = ".com" | ".org" | ".gov" | ".blog" | ".info" | ".shop" | ".co" | ".net" | ".win";
 
-
-export class QueryParam {
+export type IPAddress = string;
+export type Local = "localhost"
+;
+export interface QueryParam {
   key: string;
   value: string;
 }
-export type QueryParams = QueryParam[] | QueryParam;
-
-export class QueryString {
-  params: QueryParams;
+export interface QueryString {
+  params: QueryParam[] |  QueryParam;
 } 
-export class Domain {
+export interface Domain {
   sub?: string; 
   main: string;
   top: TopDomain; 
 }
-export type IPAddress = string;
-export type Local = "localhost";
 
-export class URL {
+export interface URL {
   scheme: URLSCHEME;
   domain: Domain | Local | IPAddress;
   port?: number;
