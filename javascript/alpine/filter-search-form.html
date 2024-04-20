@@ -34,8 +34,10 @@
             },
           }"
         >
-          <input id="searchbar" class="search searchbar" x-model="search" placeholder="Search Query..."  /> 
-v v                  <ul id="name-list" class="list" type="none" >
+          <input class="search-bar" 
+                 x-model="search" 
+                 placeholder="Search Query..."  />
+          <ul class="list" type="none" >
             <template class="item-wrapper" x-for="item in filteredItems" :key="item">  
               <li class="list-item" x-text="item"></li>
             </template>

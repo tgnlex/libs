@@ -1,0 +1,33 @@
+:root {
+--menu-width: px;
+--menu-height: px;
+}
+[aria-expanded="true"].menu {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	width: var(--menu-width);
+	height: var(--menu-height);
+}
+
+[aria-expanded="false"] .menu {
+  display: none;
+}
+
+[aria-expanded="true"] .close-btn {
+	display: inline-block;
+}
+
+[aria-expanded="false"] .close-btn {
+	display: none;
+}
+
+[aria-expanded="true"] .open-btn {
+  display: none;
+}
+
+[aria-expanded="false"] .close-btn {
+  display: inline-block;
+}
