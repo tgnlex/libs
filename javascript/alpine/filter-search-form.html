@@ -1,27 +1,4 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" type="text/css" href="../style/global.css" />
-    <link rel="stylesheet" type="text/css" href="../style/search.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Search</title>
-    <script src="https://unpkg.com/htmx.org@1.9.10"  crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/htmx.org/dist/ext/client-side-templates.js"></script> 
-    <script src="https://unpkg.com/hyperscript.org@0.9.12"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>  
-  </head>
-  <body>
-    <div id="search-container" class="container main-container"> 
-      <header id="search-header" class="page-header" x-data="{title: 'Search Baby Names'}">
-        <h1 id="search-heading" class="heading main-heading" x-text="title"></h1>
-        <button id="back-btn" class="btn"> 
-          <a class="link" href="../index.html">Go Back</a>
-        </button>
-      </header>
-      <main id="app">  
-        <div id="search-variables" class="wrapper sub-container"  
-             x-data="{
+<div id="data-list" x-data="{
           search: '',
           items: ['alex | NEUTRAL', 'andrew | BOY', 'anthony | BOY', 'aria | GIRL', 'arianna | GIRL', 'austin | BOY', 'aviva | GIRL', 
           'brianna | GIRL', 'brian | BOY', 'beatrice | GIRL', 
@@ -58,7 +35,7 @@
           }"
         >
           <input id="searchbar" class="search searchbar" x-model="search" placeholder="Search Query..."  /> 
-v v                  <ul id="name-list" class="list" type="none" style="padding: 0">
+v v                  <ul id="name-list" class="list" type="none" >
             <template class="item-wrapper" x-for="item in filteredItems" :key="item">  
               <li class="list-item" x-text="item"></li>
             </template>
