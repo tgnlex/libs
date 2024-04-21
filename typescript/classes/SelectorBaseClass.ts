@@ -1,7 +1,7 @@
 export interface Selectors {
 	select: {
-	(selector: string): Selection;
-	(element: EventTarget): Selection;
+	  (selector: string): Selection;
+	  (element: EventTarget): Selection;
 	}
 }
 
@@ -10,7 +10,7 @@ export interface Event {
    callback: () => Void;
 }
 
-interface Base extends Selectors {
+class BaseSelector extends Selectors {
   event: Event;
 }
 
