@@ -1,6 +1,6 @@
 import {Worker, isMainThread, parentPort, workerData} from 'node:worker_threads';
 
-if (isMainThread {
+if (isMainThread) {
 	function parseJSAsync(script) {
 	return new Promise((resolve, reject) => {
 	  const worker = new Worker(__filename, {
