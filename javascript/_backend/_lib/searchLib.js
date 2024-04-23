@@ -16,8 +16,16 @@ const searchArray = (array, query) => {
   }
 }
 
+const idSearch = (data, id) => {
+  const arr = json(data);
+  if (arr.data[id]) {
+    return arr.data[id];
+  } else {
+    return "Not Found"
+  }
+}
 
-const searchJsonArray = (array, field, query) => {
+const strSearchJsonArr = (array, field, query) => {
   const clean = cleanQuery(query);
   for (let i = 0; i < array.data.length; i++) {
     if (array.data[i][`${field}`]===clean) {
