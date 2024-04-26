@@ -1,4 +1,4 @@
-const workerpool = require('workerpool')
+import workerpool from 'workerpool'
 function timeout(delay) {
 	return new Promise(function(resolve, reject) {
 		setTimeout(resolve, delay);

@@ -1,4 +1,4 @@
-const workerpool = require('workerpool');
+import workerpool from 'workerpool';
 
 function add(a, b) {
     console.log(`[WORKER]: Beginning task: Add`)
