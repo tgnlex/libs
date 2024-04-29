@@ -1,0 +1,14 @@
+
+
+#### JEST STYLINT PRESET ####
+npm install jest-preset-stylelint jest stylelint --save-dev
+
+#### STYLINT SCSS ####
+npm install stylelint stylelint-scss
+
+##### STYLINT PRETTIER #####
+npm install --save-dev stylelint-formatter-pretty
+stylelint file.css --custom-formatter=node_modules/stylelint-formatter-pretty
+
+##### JEST TASK RUNNER ####
+npm install --save-dev jest jest-runner-stylelint stylelint
