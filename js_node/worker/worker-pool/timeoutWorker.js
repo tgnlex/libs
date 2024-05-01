@@ -7,4 +7,4 @@ function timeout(delay) {
 
 workerpool.worker({
 	timeout: timeout,
-});
+});	
