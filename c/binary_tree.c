@@ -30,18 +30,18 @@ struct TreeNode* insertNode (struct TreeNode* root, int value) {
   return root;
 }
 
-void inOrderTraversal(struct TreeNode* root) {
+void TreeTraversal(struct TreeNode* root) {
   if (root != NULL) {
-    inOrderTraversal(root->left);
+    TreeTraversal(root->left);
     printf("%d ", root->data);
-    inOrderTraversal(root ->right);
+    TreeTraversal(root ->right);
   }
 }
-void freeTree(struct TreeNode* root) {
+void FreeTree(struct TreeNode* root) {
   if (root != NULL) {
-    freeTree(root->left);
-    freeTree(root->right);
-    free(root);
+    FreeTree(root->left);
+    FreeTree(root->right);
+    Free(root);
   }
 }
 int main() {

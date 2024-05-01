@@ -1,4 +1,11 @@
-void createNodeList(int n) {
+struct TreeNode() 
+{
+  int data;
+  struct TreeNode* left;
+  struct TreeNode* right;
+}
+
+void CreateNodeList(int n) {
   struct node * fnNode, *tmp;
   int num, i;
 
@@ -28,19 +35,6 @@ void createNodeList(int n) {
         tmp->nextptr = fnNode;
         tmp = tmp->nextptr;
       }
-    }
-  }
-}
-void displayList() {
-  struct node *tmp;
-  if (stnode == NULL) {
-    printf(" List is empty");
-  } else {
-    tmp = stnode;
-
-    while(tmp != NULL) {
-      printf(" Data = %d\n" , tmp->num);
-      tmp = tmp->nextptr;
     }
   }
 }
