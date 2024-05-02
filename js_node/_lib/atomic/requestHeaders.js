@@ -1,6 +1,5 @@
 const header = (req, headerName) => {
   const header = req.getHeader(`${headerName}`)
-  console.log(header);
   return header; 
 }
 const headerJson = (req, headerName) => {

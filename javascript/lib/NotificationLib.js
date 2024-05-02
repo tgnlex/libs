@@ -2,7 +2,6 @@ export const createNotification = (title, message) => {
   const notification = new Notification(title, {message});
   return notification;
 }
-
 export const sendNotification = (notification) => {
   let i = 0;
   const interval = setInterval(() => {
@@ -13,12 +12,10 @@ export const sendNotification = (notification) => {
     i++
   }, 200);
 }
-
 export const sendDefaultNotification = () => {
   let defaultNotification = createNotification("Blank Notification", "")
   sendNotification(defaultNotification)
 }
-
 const requestPermission = async () => {
   const permission = await Notification.requestPermission();
     if (permission === "granted") {
@@ -31,9 +28,6 @@ const requestPermission = async () => {
       return 0;
     }
 }
-
-
-
 const validateAndSendNotification = (notification) => {
   if (notification === Notification) {
     console.log('[NotificationValidator]: Validation Passed! Calling sendNotification()')
