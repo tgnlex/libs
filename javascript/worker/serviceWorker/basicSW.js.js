@@ -10,9 +10,9 @@ const buildFiles = [
 	"./pages/*.html"
 ];
 
-self.addEventListener("install", e => {
+self.addEventListener("install", async (e) => {
 	console.log("Service Worker]:  Installing...")
-	e.waitUntil((async) => {
+	e.waitUntil(async ()  => {
 		const cache = await caches.open(cacheName);
 		console.log("[ServiceWorker]: Caching app build files...");
 		await cacheAll(buildFiles);

@@ -24,4 +24,4 @@ const Column = (props) => {
     )
 }
 
-export {Row};
+export {Column};
