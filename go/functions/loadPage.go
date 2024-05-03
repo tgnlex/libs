@@ -1,3 +1,6 @@
+
+import "os"
+
 func loadPage(title string) *Page {
 	filename := title + ".txt"
 	body, _ := os.ReadFile(filename)
