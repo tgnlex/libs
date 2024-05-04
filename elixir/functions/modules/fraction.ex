@@ -12,6 +12,4 @@ defmodule Fraction do
       b2 * b1
     )
   end
-
-
 end
