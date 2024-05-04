@@ -4,25 +4,17 @@ const cleanQuery = (raw) => {
   const query = c1 + c2;
   return query;
 }
-const searchArray = (array, query) => {
-  const clean = query.toLowerCase();
-  if (array[clean]) {
-    let reply = array[clean]; 
-    return reply;
-  }  else {
-    let reply = { status: "Not Found!"}  
-    return reply;
-  }
-}
-const idSearch = (data, id) => {
-  const arr = json(data);
+
+const searchByID = (data, id) => {
+  const arr = JSON.stringify(data);
   if (arr.data[id]) {
     return arr.data[id];
   } else {
     return "Not Found"
   }
 }
-const strSearchJsonArr = (array, field, query) => {
+
+const searchByString = (array, field, query) => {
   const clean = cleanQuery(query);
   for (let i = 0; i < array.data.length; i++) {
     if (array.data[i][`${field}`]===clean) {
