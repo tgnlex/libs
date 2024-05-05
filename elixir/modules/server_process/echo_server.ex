@@ -1,18 +1,12 @@
 defmodule EchoServer do
-  def start do
-    spawn(fn -> loop end)
-  end
-  def send_msg(server, message) do
-    send(server, {self(), msg})
-    receive do
-      {:response, response} -> response
-    end
-  end
-  defp loop do
-    receive do
-      {caller, msg} ->
-        send(caller, {:response, msg})
-    end
-    loop()
+  use GenServer
+  simpl GenServer
+  GenServer.start(
+    CallbackModule,
+    init_param,
+    name: :echo
+  )
+  def handle_call(request, server_state) do
+    {:reply, request, server_state}
   end
 end
