@@ -1,4 +1,4 @@
-defmodule Todo.CsvImporter do
+defmodule CsvImporter do
   defimpl Collectable, for: TodoList do
     def into(original) do
       {original, &into_callback/2}

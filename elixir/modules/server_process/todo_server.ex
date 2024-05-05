@@ -39,7 +39,7 @@ defmodule TodoList do
       todo_list.auto_id,
       entry
     )
-    %Todo.List{todo_list |
+    %TodoList{todo_list |
     entries: new_entries,
     auto_id: todo_list.auto_id + 1
     }
@@ -77,7 +77,7 @@ defmodule Todo.CsvImporter do
       {original, &into_callback/2}
     end
     defp into_callback(todo_list, {:cont, entry}) do
-      Todo.List.add_entry(todo_list, entry)
+      TodoList.add_entry(todo_list, entry)
     end
     defp into_callback(todo_list, :done), do: todo_list
     defp into_callback(todo_list, :halt), do: :ok
