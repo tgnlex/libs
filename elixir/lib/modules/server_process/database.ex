@@ -2,10 +2,9 @@ defmodule Database do
   def start do
     spawn(&loop/0)
   end
-
   defp loop do
     receive do
-      {:run_query, caller, query_def} do
+      {:run_query, caller, query_def} ->
         Process.sleep(2000)
         "#{query_def} result"
       end
@@ -28,5 +27,3 @@ defmodule Database do
       5000 -> {:error, :timeout}
     end
   end
-
-end
