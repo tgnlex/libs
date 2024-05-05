@@ -1,4 +1,4 @@
-defmodule DatabaseServer do
+defmodule Database do
   def start do
     spawn(&loop/0)
   end

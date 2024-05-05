@@ -1,4 +1,4 @@
-defmodule Todo.List do
+defmodule TodoList do
   defstruct auto_id: 1, entries: %{}
   def new(), do: %Todo.List{}
   def add_entry(todo_list, entry) do
