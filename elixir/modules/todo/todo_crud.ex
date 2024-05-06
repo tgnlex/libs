@@ -1,15 +1,14 @@
 defmodule Todo.Crud do
     defstruct auto_id: 1, entries: %{}
-    def new() do %TodoCRUD{}
+    def new(), do: %Todo.Crud{}
     def add_entry(todo_list, entry) do
       entry = Map.put(entry, :id, todo_list.auto_id)
-    end
     new_entries = Map.put {
       todo_list.entries,
       todo_list.auto_id,
       entry
     }
-    %TodoCRUD{todo_list |
+    %Todo.Crud{todo_list |
       entries: new_entries,
       auto_id: todo_list.auto_id + 1
     }
@@ -26,7 +25,7 @@ defmodule Todo.Crud do
       {:ok, old_entry} ->
         new_entry = updater_fun.(old_entry)
         new_entries = Map.put(todo_list.entries, new_entry.id, new_entry)
-        %TodoCRUD{todo_list | entries: new_entries }
+        %Todo.Crud{todo_list | entries: new_entries }
     end
   end
   def delete_entry(todo_list, entry_id) do
@@ -36,7 +35,16 @@ defmodule Todo.Crud do
       {:ok, this_entry }
         this_entry = delete.(this_entry)
          this_entries = Map.delete(todo_list.entries, this_entry.id, this_entry)
-        %TodoCRUD{todo_list | entry: this_entry}
+        %Todo.Crud{todo_list | entry: this_entry}
     end
+  end
+  def new(entries \\ []) do
+    Enum.reduce(
+      entries,
+      %Todo.Crud{},
+      fn entry, todo_list_acc ->
+        add_entry(todo_list_acc, entry)
+      end
+    )
   end
 end
