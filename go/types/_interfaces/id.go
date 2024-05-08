@@ -1,0 +1,1 @@
+type ID interface {} `json:"id"`

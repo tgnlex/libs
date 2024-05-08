@@ -1,11 +1,11 @@
-type rect struct {
+type Rectangle struct {
 	width float64
 	length float64
 	area() float64
 	perimeter() float64
 }
 
-type circle {
+type Circle {
 	radius float64 
 	circumference() float64
 	diameter() float64

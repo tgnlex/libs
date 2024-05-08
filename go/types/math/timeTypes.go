@@ -9,6 +9,6 @@ type Time struct {
 	second int
 }
 type DateTime struct {
-	date
-	time
+	Date
+	Time
 }
