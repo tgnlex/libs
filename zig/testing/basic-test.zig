@@ -1,5 +1,5 @@
 std = @import("std");
-const expecet = std.testing.expect;
+const expect = std.testing.expect;
 
 test "Succeeds by default" {
 	try expect(true);
