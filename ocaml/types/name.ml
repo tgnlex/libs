@@ -1,1 +1,0 @@
-type name = { first: string; last : string; }
