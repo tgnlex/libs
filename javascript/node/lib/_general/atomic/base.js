@@ -1,9 +1,11 @@
-const noop = () => {
-  return;
-}
+function noop() {};
+
 const read = (data) => {
   return data;
 } 
+function heartbeat() {
+  this.isAlive = true;
+}
 const log = (name, data) => {
   const src = name.toUpperCase();
   console.log(`[${src}] ${data}`)
@@ -25,4 +27,4 @@ const sleep = (i) => {
 
 
 
-export {noop, read, logRead, sleep, sleepMs};
+export {noop, read, logRead, sleep, sleepMs, heartbeat};

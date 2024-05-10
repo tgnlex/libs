@@ -3,15 +3,15 @@
 const Column = (props) => {
  const style = {
    display: "flex", 
-   flexDirection: "column" 
+   flexDirection: "column", 
    color: props.color, 
    background: props.background,
    height: props.height, 
    width: props.width, 
-   margin: props.margin: 
+   margin: props.margin, 
    padding: props.padding, 
    alignItems: props.alignItems, 
-   alignContent: props.alignContent: 
+   alignContent: props.alignContent, 
    justifyItems: props.justifyItems, 
    justifyContent: props.justifyContent 
  };
