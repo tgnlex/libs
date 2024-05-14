@@ -4,4 +4,4 @@
 struct Heap {
   int arr[MAX_HEAP_SIZE];
   int size;
-}
+};

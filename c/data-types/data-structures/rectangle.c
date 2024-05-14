@@ -3,4 +3,4 @@ struct Rectangle {
   int width;
   double perimeter;
   double area;
-}
+};

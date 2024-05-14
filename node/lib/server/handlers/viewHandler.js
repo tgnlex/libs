@@ -1,7 +1,7 @@
-// import errorHandler from './errorHandler.js'
-// import reqLogger from '../middleware/logger.js'
+import errorHandler from './errorHandler.js'
+import reqLogger from '../middleware/logger.js'
 const viewHandler = (req, res, next, view, opts) => {
-  // reqLogger(req);
+  reqLogger(req);
   console.log(req);
   if (view) {
     if (opts) {
@@ -11,8 +11,7 @@ const viewHandler = (req, res, next, view, opts) => {
     } 
   } else  {
     let error = new Error("[HTTP]: ERROR! No view was passed to view handler.")
-    // errorHandler(e, 404);
-    console.error(error.message)
+    errorHandler(error,   404);
     res.send(error.message);
     next()
   }

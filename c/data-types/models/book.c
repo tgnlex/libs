@@ -5,4 +5,4 @@ struct Book {
   char genre[100];
   int year_published;
   float price;
-}
+};

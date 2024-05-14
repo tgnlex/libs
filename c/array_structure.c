@@ -2,5 +2,5 @@
 int main() {
   int arr[10];
   int i;
-  printf()
-}
+  printf(arr[1]);
+};

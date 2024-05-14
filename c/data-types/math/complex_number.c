@@ -3,4 +3,4 @@
 struct Complex {
   float real;
   float imaginary;
-}
+};

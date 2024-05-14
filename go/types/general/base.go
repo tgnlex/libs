@@ -4,8 +4,8 @@ type Unit struct {
 type Text struct {
 	value: string;
 }
-type Value struct {
-	unit
-	str string
-}
 
+ 
+type filterRgx struct {
+	rgx *regexp.Regexp
+}
