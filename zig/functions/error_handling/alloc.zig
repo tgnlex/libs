@@ -1,0 +1,1 @@
+const AllocationError = error{OutOfMemory}; 

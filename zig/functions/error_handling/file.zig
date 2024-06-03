@@ -4,5 +4,5 @@ const FileOpenError = error{
   FileNotFound,
 };
 
-const AllocationError = error{OutOfMemory}; 
+
 
