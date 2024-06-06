@@ -1,3 +1,3 @@
-function RunF(filename)
+function RunScript(filename)
     dofile(filename);
 end
