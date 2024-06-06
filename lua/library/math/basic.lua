@@ -23,7 +23,7 @@ function Increment(x)
   return result;
 end
 
-function Decrement(y)
+function Decrement(x)
   local result = x - 1;
   return result;
 end 

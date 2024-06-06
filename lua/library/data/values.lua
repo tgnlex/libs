@@ -1,7 +1,3 @@
-function Select (n, ...)
-  return arg[n];
-end
-
 function AddVals (array)
   local result = 0;
   for key,val in ipairs(array) do 
