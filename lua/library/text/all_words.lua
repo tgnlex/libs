@@ -1,4 +1,4 @@
-local function allwords ()
+function AllWords ()
   local line = io.read()
   local position = 1;
   local result = function()
@@ -18,17 +18,8 @@ local function allwords ()
 end
 
 function PrintAllWords()
-  for word in allwords() do 
+  for word in AllWords() do 
     print(word)
   end
 end
 
-function WordCount()
-  local count = 0
-  for word in allwords() do
-    if word then 
-      count = count + 1;
-    end
-  end
-  print(count)
-end
