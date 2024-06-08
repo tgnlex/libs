@@ -1,3 +1,4 @@
+require "luasocket"
 local threads = {}
 
 function Get(host, file)

@@ -1,3 +1,5 @@
+require "luasocket"
+
 function ReceiveConn (conn)
   conn:timeout(0) 
   local s, status = conn:receive(2^10)
