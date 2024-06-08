@@ -4,6 +4,6 @@ function Error (err)
   return err;
 end
 
-function Trace ()
-  return print(debug.traceback())
+function TypeError(value)
+  return error("Function does not accept a " .. type(value))
 end

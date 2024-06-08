@@ -9,6 +9,14 @@ function Iterate(table)
   end
   return result();
 end
+-- stateless array iterator
+function StatelessIter(array, iter)
+  iter = iter + 1;
+  local val = array[iter];
+  if val then 
+    return iter, val;
+  end
+end
 
 function StateIter (state)
   while state.line do 
@@ -22,14 +30,6 @@ function StateIter (state)
     end
   end 
   return nil
-end
-
-function StatelessIter(array, iter)
-  iter = iter + 1;
-  local val = array[iter];
-  if val then 
-    return iter, val;
-  end
 end
 
 function IterPrint(table)

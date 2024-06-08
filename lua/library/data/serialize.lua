@@ -1,11 +1,18 @@
-function Serialize (o) 
-  if type(o) == "number" then 
-    io.write(o) 
-  elseif type(o) == "string" then 
+function BasicSerialize(data) 
+  if type(data) == "number" then 
+    return tostring(data) 
+  else 
+    return string.format("%q", data)
+  end
+end
+function Serialize (data) 
+  if type(data) == "number" then 
+    io.write(data) 
+  elseif type(data) == "string" then 
     io.write(string.format("%q, o"))
-  elseif type(o) == "table" then 
+  elseif type(data) == "table" then 
     io.write("{\n") 
-    for k,v in pairs(o) do 
+    for k,v in pairs(data) do 
       io.write(" ", k, " = ")
       Serialize(v) 
       io.write(",\n")
