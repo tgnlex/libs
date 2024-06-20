@@ -1,0 +1,1 @@
+fn next(&mut self) -> Option<Self::Item>;
